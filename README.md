@@ -8,7 +8,7 @@ Instead of studying Python basics, I'm using Python as my main stack for 30 days
 
 | Day | Date | Project | Description | Status |
 |---:|---|---|---|---|
-| 01 | Sep 12 | DevVault CLI | A developer-focused CLI for saving, organizing, searching, and managing snippets, commands, notes, and useful URLs. | ⬜ |
+| 01 | Sep 12 | DevVault CLI | A developer-focused CLI for saving, organizing, searching, and managing snippets, commands, notes, and useful URLs. | ✅ |
 | 02 | Sep 13 | Smart File Organizer | Automatically sort messy directories by file type, extension, naming rules, and custom categories. | ⬜ |
 | 03 | Sep 14 | GitHub Analyzer | Analyze GitHub users and repositories to generate statistics about languages, activity, commits, issues, stars, and more. | ⬜ |
 | 04 | Sep 15 | Website Monitor | Monitor websites and API endpoints for uptime, response time, status codes, and availability issues. | ⬜ |

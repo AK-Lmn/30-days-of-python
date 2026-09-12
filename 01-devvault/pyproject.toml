@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "devvault"
+version = "0.1.0"
+description = "A developer-focused CLI for saving, organizing, searching, and managing snippets, commands, notes, and useful URLs."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Developer" }
+]
+dependencies = [
+    "click>=8.1.0",
+    "rich>=13.7.0",
+    "pyperclip>=1.8.2",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[project.scripts]
+devvault = "devvault.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["devvault*"]
