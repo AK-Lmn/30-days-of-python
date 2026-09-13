@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "github-analyzer"
+version = "0.1.0"
+description = "Analyze GitHub users and repositories to generate statistics about languages, activity, commits, issues, stars, and more."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Developer" }
+]
+dependencies = [
+    "click>=8.1.0",
+    "rich>=13.7.0",
+    "httpx>=0.27.0",
+    "customtkinter>=6.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[project.scripts]
+gh-analyzer = "github_analyzer.cli:main"
+github-analyzer = "github_analyzer.cli:main"
+gh-analyzer-gui = "github_analyzer.gui:run_gui"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["github_analyzer*"]
