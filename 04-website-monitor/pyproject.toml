@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "website-monitor"
+version = "0.1.0"
+description = "Monitor websites and API endpoints for uptime, response time, status codes, and availability issues."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Developer" }
+]
+dependencies = [
+    "click>=8.1.0",
+    "rich>=13.7.0",
+    "httpx>=0.27.0",
+    "customtkinter>=6.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+]
+
+[project.scripts]
+web-monitor = "website_monitor.cli:main"
+website-monitor = "website_monitor.cli:main"
+web-monitor-gui = "website_monitor.gui:run_gui"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["website_monitor*"]

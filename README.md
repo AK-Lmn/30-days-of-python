@@ -11,7 +11,7 @@ Instead of studying Python basics, I'm using Python as my main stack for 30 days
 | 01 | Sep 12 | DevVault CLI | A developer-focused CLI for saving, organizing, searching, and managing snippets, commands, notes, and useful URLs. | ✅ |
 | 02 | Sep 13 | Smart File Organizer | Automatically sort messy directories by file type, extension, naming rules, and custom categories. | ✅ (Late) |
 | 03 | Sep 14 | GitHub Analyzer | Analyze GitHub users and repositories to generate statistics about languages, activity, commits, issues, stars, and more. | ✅ |
-| 04 | Sep 15 | Website Monitor | Monitor websites and API endpoints for uptime, response time, status codes, and availability issues. | ⬜ |
+| 04 | Sep 15 | Website Monitor | Monitor websites and API endpoints for uptime, response time, status codes, and availability issues. | ✅ |
 | 05 | Sep 16 | Universal API CLI | A reusable CLI for sending REST requests, filtering responses, formatting output, and exporting API data. | ⬜ |
 | 06 | Sep 17 | Web Scraper Engine | Build a reusable scraping engine with pagination, retries, parsing, rate limiting, and structured data exports. | ⬜ |
 | 07 | Sep 18 | Price Tracker | Track product prices over time, store historical data, and detect meaningful price changes. | ⬜ |
