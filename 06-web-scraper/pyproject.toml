@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "web-scraper"
+version = "0.1.0"
+description = "Web Scraper Engine with pagination, retries, rate limiting, and structured exports."
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    { name = "Developer" }
+]
+dependencies = [
+    "httpx>=0.27.0",
+    "beautifulsoup4>=4.12.0",
+    "click>=8.1.0",
+    "rich>=13.7.0",
+    "customtkinter>=6.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+]
+
+[project.scripts]
+scraper = "web_scraper.cli:main"
+web-scraper = "web_scraper.cli:main"
+scraper-gui = "web_scraper.gui:run_gui"
+web-scraper-gui = "web_scraper.gui:run_gui"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["web_scraper*"]
