@@ -16,7 +16,7 @@ Instead of studying Python basics, I'm using Python as my main stack for 30 days
 | 06 | Sep 17 | Web Scraper Engine | Build a reusable scraping engine with pagination, retries, parsing, rate limiting, and structured data exports. | ✅ |
 | 07 | Sep 18 | Price Tracker | Track product prices over time, store historical data, and detect meaningful price changes. | ✅ |
 | 08 | Sep 19 | Terminal Dashboard | A live terminal dashboard showing system information, resource usage, processes, and other useful metrics. | ✅ |
-| 09 | Sep 20 | API Aggregator | Combine data from multiple external APIs into one consistent service with a unified response format. | ⬜ |
+| 09 | Sep 20 | API Aggregator | Combine data from multiple external APIs into one consistent service with a unified response format. | ✅ |
 | 10 | Sep 21 | FastAPI Application | Build a complete REST API around an original idea with proper routing, validation, error handling, and documentation. | ⬜ |
 | 11 | Sep 22 | PostgreSQL API | Extend an API with PostgreSQL, focusing on relational data modeling, queries, migrations, and persistence. | ⬜ |
 | 12 | Sep 23 | Authentication Service | Build an authentication backend with registration, login, password hashing, tokens, protected routes, and session handling. | ⬜ |
