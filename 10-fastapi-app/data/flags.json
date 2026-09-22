@@ -1,0 +1,151 @@
+[
+  {
+    "name": "Dark Mode V2",
+    "description": "Refreshed dark mode theme with AMOLED high contrast",
+    "flag_type": "boolean",
+    "enabled": true,
+    "default_value": false,
+    "rules": [
+      {
+        "id": "87253c5d",
+        "name": "Beta Testers",
+        "conditions": [
+          {
+            "attribute": "is_beta",
+            "operator": "equals",
+            "value": true
+          }
+        ],
+        "serve_value": true,
+        "rollout_percentage": null
+      },
+      {
+        "id": "8b582efe",
+        "name": "Gradual Rollout 50%",
+        "conditions": [],
+        "serve_value": true,
+        "rollout_percentage": 50
+      }
+    ],
+    "tags": [
+      "frontend",
+      "theme",
+      "ui"
+    ],
+    "key": "dark-mode-v2",
+    "created_at": "2026-09-22T10:11:16.091022Z",
+    "updated_at": "2026-09-22T10:11:16.091022Z",
+    "version": 1
+  },
+  {
+    "name": "One-Click Checkout Redesign",
+    "description": "Streamlined checkout flow for mobile and desktop",
+    "flag_type": "string",
+    "enabled": true,
+    "default_value": "legacy_v1",
+    "rules": [
+      {
+        "id": "cf70b033",
+        "name": "Internal Employees",
+        "conditions": [
+          {
+            "attribute": "email",
+            "operator": "ends_with",
+            "value": "@flagforge.dev"
+          }
+        ],
+        "serve_value": "variant_one_click",
+        "rollout_percentage": null
+      },
+      {
+        "id": "e24a7213",
+        "name": "US and CA VIPs",
+        "conditions": [
+          {
+            "attribute": "country",
+            "operator": "in",
+            "value": [
+              "US",
+              "CA"
+            ]
+          },
+          {
+            "attribute": "tier",
+            "operator": "equals",
+            "value": "vip"
+          }
+        ],
+        "serve_value": "variant_express",
+        "rollout_percentage": null
+      }
+    ],
+    "tags": [
+      "checkout",
+      "growth"
+    ],
+    "key": "checkout-redesign",
+    "created_at": "2026-09-22T10:11:16.091914Z",
+    "updated_at": "2026-09-22T10:11:16.091914Z",
+    "version": 1
+  },
+  {
+    "name": "Maximum Upload Size Limit",
+    "description": "Configurable file upload ceiling in megabytes",
+    "flag_type": "number",
+    "enabled": true,
+    "default_value": 25,
+    "rules": [
+      {
+        "id": "f56ed292",
+        "name": "Enterprise Plan",
+        "conditions": [
+          {
+            "attribute": "plan",
+            "operator": "equals",
+            "value": "enterprise"
+          }
+        ],
+        "serve_value": 500,
+        "rollout_percentage": null
+      },
+      {
+        "id": "77ae0ebe",
+        "name": "Pro Plan",
+        "conditions": [
+          {
+            "attribute": "plan",
+            "operator": "equals",
+            "value": "pro"
+          }
+        ],
+        "serve_value": 100,
+        "rollout_percentage": null
+      }
+    ],
+    "tags": [
+      "backend",
+      "limits",
+      "storage"
+    ],
+    "key": "max-upload-size-mb",
+    "created_at": "2026-09-22T10:11:16.092642Z",
+    "updated_at": "2026-09-22T10:11:16.092642Z",
+    "version": 1
+  },
+  {
+    "name": "AI Code Assistant Copilot",
+    "description": "Generative AI suggestions during project setup",
+    "flag_type": "boolean",
+    "enabled": false,
+    "default_value": false,
+    "rules": [],
+    "tags": [
+      "ai",
+      "experimental"
+    ],
+    "key": "beta-ai-copilot",
+    "created_at": "2026-09-22T10:11:16.093316Z",
+    "updated_at": "2026-09-22T10:11:16.093316Z",
+    "version": 1
+  }
+]
