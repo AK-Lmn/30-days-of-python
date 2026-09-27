@@ -20,7 +20,7 @@ Instead of studying Python basics, I'm using Python as my main stack for 30 days
 | 10 | Sep 21 | FastAPI Application | Build a complete REST API around an original idea with proper routing, validation, error handling, and documentation. | ✅ |
 | 11 | Sep 22 | PostgreSQL API | Extend an API with PostgreSQL, focusing on relational data modeling, queries, migrations, and persistence. | ✅ |
 | 12 | Sep 23 | Authentication Service | Build an authentication backend with registration, login, password hashing, tokens, protected routes, and session handling. | ✅ |
-| 13 | Sep 24 | Background Job System | Process long-running or scheduled tasks outside the main request cycle using background workers and job states. | ⬜ |
+| 13 | Sep 24 | Background Job System | Process long-running or scheduled tasks outside the main request cycle using background workers and job states. | ✅ |
 | 14 | Sep 25 | Automation Platform | Create a system where users can define scheduled or event-triggered actions that run automatically. | ⬜ |
 | 15 | Sep 26 | Webhook Service | Receive, validate, store, and process webhook events with retries, signatures, and delivery tracking. | ⬜ |
 | 16 | Sep 27 | ETL Pipeline | Extract data from real sources, transform and validate it, then load it into a structured destination. | ⬜ |
