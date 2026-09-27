@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hookrelay"
+version = "0.1.0"
+description = "Webhook receiver, validation, event storage, and delivery service with signatures and retries."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.110.0",
+    "uvicorn[standard]>=0.29.0",
+    "pydantic>=2.6.0",
+    "pydantic-settings>=2.2.0",
+    "sqlalchemy[asyncio]>=2.0.28",
+    "aiosqlite>=0.20.0",
+    "rich>=13.7.0",
+    "click>=8.1.0",
+    "httpx>=0.27.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+    "pytest-asyncio>=0.23.0",
+]
+
+[project.scripts]
+hookrelay = "hookrelay.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["hookrelay*"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
