@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+*.db
+*.sqlite
+*.sqlite3
+data_output/
+quarantine/
+sample_*.csv
+sample_*.json
+sample_*.jsonl

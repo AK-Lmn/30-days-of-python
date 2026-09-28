@@ -1,0 +1,47 @@
+name: "ecommerce_sales_pipeline"
+batch_size: 100
+error_strategy: "QUARANTINE"
+
+source:
+  type: "csv"
+  path: "sample_orders.csv"
+  delimiter: ","
+  encoding: "utf-8"
+
+validation:
+  rules:
+    - type: "not_empty"
+      field: "order_id"
+    - type: "email"
+      field: "customer_email"
+    - type: "range"
+      field: "price"
+      min: 0.01
+
+transformations:
+  - type: "clean_string"
+    fields: ["customer_name", "product", "category"]
+    strip: true
+  - type: "normalize_case"
+    fields: ["category", "status"]
+    mode: "lower"
+  - type: "cast"
+    types:
+      price: "float"
+      quantity: "int"
+  - type: "derive"
+    field: "total_amount"
+    expression: "round(price * quantity, 2)"
+  - type: "anonymize"
+    fields: ["customer_email"]
+    strategy: "mask_email"
+
+destinations:
+  - type: "sqlite"
+    connection_url: "sqlite:///warehouse.db"
+    table: "orders_clean"
+    mode: "REPLACE"
+    primary_keys: ["order_id"]
+  - type: "json"
+    path: "data_output/orders_clean.json"
+    mode: "REPLACE"

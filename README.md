@@ -23,7 +23,7 @@ Instead of studying Python basics, I'm using Python as my main stack for 30 days
 | 13 | Sep 24 | Background Job System | Process long-running or scheduled tasks outside the main request cycle using background workers and job states. | ✅ |
 | 14 | Sep 25 | Automation Platform | Create a system where users can define scheduled or event-triggered actions that run automatically. | ✅ |
 | 15 | Sep 26 | Webhook Service | Receive, validate, store, and process webhook events with retries, signatures, and delivery tracking. | ✅ |
-| 16 | Sep 27 | ETL Pipeline | Extract data from real sources, transform and validate it, then load it into a structured destination. | ⬜ |
+| 16 | Sep 27 | ETL Pipeline | Extract data from real sources, transform and validate it, then load it into a structured destination. | ✅ |
 | 17 | Sep 28 | Data Cleaning Engine | Automatically clean inconsistent CSV and JSON datasets by handling missing values, duplicates, formatting, and validation. | ⬜ |
 | 18 | Sep 29 | Analytics API | Turn raw data into useful statistics, aggregations, filters, summaries, and report-ready API responses. | ⬜ |
 | 19 | Sep 30 | Data Dashboard | Build an interactive interface for exploring datasets, metrics, trends, and analytics produced by the backend. | ⬜ |
