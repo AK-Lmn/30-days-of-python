@@ -1,0 +1,92 @@
+name: customer_cleaning_recipe
+version: "1.0"
+headers:
+  casing: snake
+  strip_whitespace: true
+  remove_special_characters: true
+  rename:
+    email_address: email
+    e_mail_address: email
+    e_mail: email
+    mail: email
+    phone_number: phone
+    telephone: phone
+
+missing:
+  missing_values:
+    - ""
+    - "na"
+    - "n/a"
+    - "null"
+    - "none"
+    - "nan"
+    - "-"
+    - "?"
+  default_strategy: forward_fill
+  columns:
+    city:
+      strategy: constant
+      fill_value: Unknown
+
+duplicates:
+  enabled: true
+  subset:
+    - email
+  keep: first
+  fuzzy: true
+  similarity_threshold: 0.90
+  fuzzy_columns:
+    - first_name
+    - last_name
+
+text:
+  - columns:
+      - first_name
+      - last_name
+      - city
+    strip: true
+    collapse_spaces: true
+    casing: title
+    normalize_unicode: true
+
+emails:
+  - columns:
+      - email
+    lowercase: true
+    action_on_invalid: quarantine
+
+phones:
+  - columns:
+      - phone
+    format: e164
+    default_country_code: "1"
+
+dates:
+  - columns:
+      - signup_date
+    target_format: "%Y-%m-%d"
+
+booleans:
+  - columns:
+      - is_active
+    nullable: true
+
+numbers:
+  - columns:
+      - account_balance
+    strip_currency: true
+    remove_commas: true
+    target_type: float
+    decimals: 2
+
+outliers:
+  - columns:
+      - account_balance
+    method: iqr
+    strategy: clip
+    threshold: 1.5
+
+validations:
+  - column: email
+    not_null: true
+    action: quarantine

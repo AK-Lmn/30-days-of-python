@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cleanforge"
+version = "0.1.0"
+description = "Autonomous, extensible data cleaning engine for messy CSV, TSV, and JSON datasets."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic>=2.6.0",
+    "click>=8.1.0",
+    "rich>=13.7.0",
+    "pyyaml>=6.0.1",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[project.scripts]
+cleanforge = "cleanforge.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["cleanforge*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

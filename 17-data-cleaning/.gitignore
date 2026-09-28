@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+*.db
+*.sqlite
+*.sqlite3
+data_output/
+quarantine/
+cleaned_*.csv
+cleaned_*.json
+messy_*.csv
+messy_*.json
+report_*.md
